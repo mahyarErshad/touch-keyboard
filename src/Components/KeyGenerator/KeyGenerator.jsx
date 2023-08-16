@@ -6,12 +6,11 @@ export default function KeyGenerator({ inputValue, setInputValue, length, disabl
   const handleButtonPress = (key) => {
     if (key === "تصحیح") {
       if (!inputValue) return;
-      setInputValue("");
+      setInputValue(inputValue.slice(0, -1));
     } else if (key === "لغو") {
-      alert("canceled");
       setInputValue("");
     } else if (key === "تایید") {
-      alert(inputValue);
+      alert(`Input value is: ${inputValue}`);
       setInputValue("");
     } else {
       if (!Number(inputValue) && disableZero && Number(key) === 0) return;
