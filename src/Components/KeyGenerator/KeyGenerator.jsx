@@ -8,9 +8,11 @@ export default function KeyGenerator({ inputValue, setInputValue, length, disabl
       if (!inputValue) return;
       setInputValue("");
     } else if (key === "لغو") {
-      console.log("canceled");
+      alert("canceled");
+      setInputValue("");
     } else if (key === "تایید") {
-      console.log(inputValue);
+      alert(inputValue);
+      setInputValue("");
     } else {
       if (!Number(inputValue) && disableZero && Number(key) === 0) return;
       if (length && inputValue.length === length.maxLength) return;
