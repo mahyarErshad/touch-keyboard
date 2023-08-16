@@ -1,3 +1,5 @@
+import ValueReader from "../ValueReader/ValueReader";
+
 const TouchKeyboard = ({ inputValue, setInputValue, length, className, passwordInput, disableZero, valueReader }) => {
   const inputType = passwordInput ? "password" : "text";
 
