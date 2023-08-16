@@ -1,5 +1,6 @@
 import ValueReader from "../ValueReader/ValueReader";
 import KeyGenerator from "../KeyGenerator/KeyGenerator";
+import "./touchKeyboard.css";
 
 const TouchKeyboard = ({ inputValue, setInputValue, length, className, passwordInput, disableZero, valueReader }) => {
   const inputType = passwordInput ? "password" : "text";
