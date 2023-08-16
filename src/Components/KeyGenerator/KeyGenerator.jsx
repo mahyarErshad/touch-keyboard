@@ -1,6 +1,5 @@
 export default function KeyGenerator({ inputValue, setInputValue, length, disableZero }) {
   const disabledState = !inputValue || (length && inputValue.length < length.minLength);
-  const history = useHistory();
 
   const keysData = ["1", "2", "3", { value: "تصحیح", className: "backspace" }, "4", "5", "6", { value: "لغو", className: "abort" }, "7", "8", "9", { value: "تایید", className: "enter", disabled: disabledState, type: "submit" }, "00", "0", "000"];
 
@@ -9,7 +8,7 @@ export default function KeyGenerator({ inputValue, setInputValue, length, disabl
       if (!inputValue) return;
       setInputValue("");
     } else if (key === "لغو") {
-      history.push("/");
+      console.log("canceled");
     } else if (key === "تایید") {
       console.log(inputValue);
     } else {
